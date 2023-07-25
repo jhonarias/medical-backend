@@ -1,0 +1,145 @@
+Daniel Gonzalez - Frontend
+Pros
+
+Versiono el proyecto
+Hace validaciones del form
+Llamado a la api
+
+Cons
+
+No hace uso de pipes para la conversión de moneda
+No hace pruebas unitarias
+Creo componentes y no se usaron
+Dejo toda la lógica en un mismo componente
+Los datos no se tiparon
+No estructuro
+
+
+La prueba no es funcional se presenta el sgte error
+
+<robinsonloaiza@gmail.com>
+Pros
+- La prueba es funcional en el nivel 2
+- Agrego validaciones al formulario
+- Agrego componentes cada uno con su responsabilidad
+- La Solución visualmente es agradable no es responsive
+- Utiliza pipes para la conversion de moneda y el mapeo del codigo de ciudad a nombre
+- Usa modelos
+
+Contras
+- En el codigo maneja ingles y español
+- Falto legibilidad en el codigo, dividir en metodos mas pequeños.
+- No hizo pruebas unitarias
+
+En conclusión la prueba es funcional, considero que es Junior Advance 
+
+Camilo Soto
+Pros 
+- La prueba es funcional en el nivel 2
+- Agrego validaciones al formulario
+- Uso clases y interfaces
+- La solución visualmente es agradable, no es responsive
+- Hizo algunos unit test
+- Uso el environment
+- Manejo un archivo de configuración para la conversión de moneda
+
+- Contras
+- No es modular
+- Falto Unit test en los metodos con mas logica
+- Falto especificar en los metodos el tipo de retorno y en algunos parametros el tipo de dato
+- No uso pipes
+- No uso modificadores de acceso: public, protected o privated
+
+En conclusión considero que es un Junior Advance con capacidad a mas adelante ser semi senior
+
+[Frontend Angular SemiSr] Stiven Agudelo Benavides
+Pros
+- La prueba es funcional en el nivel 2
+- Agrego validaciones
+- Uso modelos
+- La solución visualmente es agradable
+- Uso un servicio externo para la conversión de moneda
+- Uso pipe para la conversión de moneda
+
+- Contras
+- Falto estructurar mejor la solucion (componentes cada uno con su resposabilidad)
+- Falto legibilidad en el codigo, dividir en metodos mas pequeños.
+- No uso el environment
+- No realizo unit test
+
+En conclusión la prueba es funcional, pero aun falta aspectos a mejorar considero que es perfil Junior Advance
+
+[Frontend Angular SemiSr] Laura Bedoya
+Pros 
+- La prueba es funcional en el nivel 2
+- Agrego validaciones al formulario
+- Uso interfaces
+- La solución visualmente es agradable
+- Uso el environment
+- Manejo un archivo de configuración para la conversión de moneda
+- Es modular
+- Los metodos tienen su respectiva logica
+- Aplico estilos encapsulados a cada componente
+
+- Contras
+- Falto Unit test
+- Falto especificar en los metodos el tipo de retorno
+- No uso pipes
+- No uso modificadores de acceso: public, protected o privated
+
+En conclusión considero que es un perfil Semi senior
+
+[Miguel Ángel Marín Toro] - [Frontend Dev] - marintoromiguel.a@gmail.com
+Pros
+- El repo esta en github
+- Creo modelos
+- Uso reactive form
+- Funcional basico para el nivel 1(sin rutas con conexión)
+- crea componentes
+
+Contras
+- Falto validaciones en el form
+- Falto aplicar rutas con conexion
+- No es modular
+- No uso pipes para la conversion de moneda
+- No realizo unit test
+- No uso el archivo environment
+- Se hace el llamado a la api por busqueda
+
+- En conclusión considero que fue una prueba muy basica para un perfil Ssr, considero que es un perfil Junior
+
+
+Contras
+
+Consultar
+data bindin
+lazing loading
+routing
+
+- A que se dedica la empresa
+- Comente mas de usted que experiencia tiene
+- manejor de repositorios en la empresa donde trabaja
+- integración continua
+- Con que tecnologias a trabajado
+- Con angular cuanto tiempo de experiencia tiene
+- Nivel de ingles
+- NIvel de typescript
+- programación orientada a objetos
+- que es una interfaz
+- que es una clase abstracta
+- diferenci clase abstracta y una interfaz
+- patrones de diseños
+- que es un patron de diseño
+- Patron aquitectonico
+- diferenciqa entre let, const y var
+- tipos de dato any, onao
+- A trabajado con type
+- A trabajado con datos genericos
+// angular
+- version angular
+- que es un modulo en angular -> agrupar elementos de angular
+- que estrategias de comunicación a menejado entre components
+ - input, output y servicions observables
+- Que es un servicio
+- Que manejo para los errores del form
+- como hizo para no manejar multiples llamadas
