@@ -144,7 +144,7 @@ const getQuestion = async (_id: string): Promise<QuestionResponse> => {
     },
   ]);
   return {
-    data: response? response[0] : [],
+    data: response? response[0] : {},
     success: true,
   } as QuestionResponse;
 };
@@ -153,12 +153,18 @@ const update = async (_id: string, data: Question) => {
   const response = await QuestionModel.findOneAndUpdate({ _id }, data, {
     new: true,
   });
-  return response;
+  return {
+    data: response,
+    success: true,
+  } as QuestionResponse;
 };
 
 const remove = async (_id: string) => {
   const response = await QuestionModel.findOneAndRemove({ _id });
-  return response;
+  return {
+    data: response,
+    success: true,
+  } as QuestionResponse;
 };
 
 export {
