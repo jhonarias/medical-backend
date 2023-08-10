@@ -27,7 +27,7 @@ router.get(
 );
 router.post(
   "/",
-  validateCreateAndUpdate,
+  // validateCreateAndUpdate,
   checkSessionMiddleware,
   rolMiddleware([UserType.ADMIN]),
   createAnswer
