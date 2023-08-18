@@ -4,10 +4,6 @@ import { QuestionStatus } from "../enums";
 
 const QuestionSchema =  new Schema<Question>(
     {
-        title: {
-            type: String,
-            required: true,
-        },
         description: {
             type: String,
             required: true,
