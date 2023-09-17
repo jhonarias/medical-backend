@@ -6,31 +6,31 @@ import TopicModel from "../models/topic";
 import SubtopicModel from "../models/subtopic";
 import { QuestionDataResponse, QuestionResponse } from "../interfaces/question-response.interface";
 
-const create = async (question: Question): Promise<QuestionResponse> => {
-  const topicExists = await TopicModel.findOne({ _id: question.topic });
-  const subtopicExists = await SubtopicModel.findOne({
-    _id: question.subtopic,
-  });
+const create = async (questions: Question[]): Promise<QuestionDataResponse> => {
+  // const topicExists = await TopicModel.findOne({ _id: question.topic });
+  // const subtopicExists = await SubtopicModel.findOne({
+  //   _id: question.subtopic,
+  // });
 
-  if (question.topic && !topicExists) {
-    return Promise.resolve({
-      error: "TOPIC_DOES_NOT_EXIST",
-      success: false,
-    } as QuestionResponse);
-  }
+  // if (question.topic && !topicExists) {
+  //   return Promise.resolve({
+  //     error: "TOPIC_DOES_NOT_EXIST",
+  //     success: false,
+  //   } as QuestionResponse);
+  // }
 
-  if (question.subtopic && !subtopicExists) {
-    return Promise.resolve({
-      error: "SUBTOPIC_DOES_NOT_EXIST",
-      success: false,
-    } as QuestionResponse);
-  }
+  // if (question.subtopic && !subtopicExists) {
+  //   return Promise.resolve({
+  //     error: "SUBTOPIC_DOES_NOT_EXIST",
+  //     success: false,
+  //   } as QuestionResponse);
+  // }
 
-  const questionModel = await QuestionModel.create(question);
+  const questionModel = await QuestionModel.create(questions);
   const response = {
     data: questionModel,
     success: true,
-  } as QuestionResponse;
+  } as QuestionDataResponse;
   return response;
 };
 
@@ -142,6 +142,24 @@ const getQuestion = async (_id: string): Promise<QuestionResponse> => {
         as: "answers",
       },
     },
+    {
+      $lookup: {
+        from: "topics",
+        localField: "topic", // question model
+        foreignField: "_id", // topic model
+        as: "topic",
+      },
+    },
+    {
+      $lookup: {
+        from: "subtopics",
+        localField: "subtopic", // question model
+        foreignField: "_id", // topic model
+        as: "subtopic",
+      },
+    },
+    { $unwind: { path: "$topic", preserveNullAndEmptyArrays: true } },
+    { $unwind: { path: "$subtopic", preserveNullAndEmptyArrays: true } },
   ]);
   return {
     data: response? response[0] : {},

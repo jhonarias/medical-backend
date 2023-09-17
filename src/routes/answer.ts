@@ -36,7 +36,7 @@ router.put(
   "/:id",
   checkSessionMiddleware,
   rolMiddleware([UserType.ADMIN]),
-  validateCreateAndUpdate,
+  // validateCreateAndUpdate,
   updateAnswer
 );
 router.delete(

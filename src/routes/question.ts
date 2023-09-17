@@ -41,7 +41,7 @@ router.get(
 );
 router.post(
   "/",
-  validateCreateAndUpdate,
+  // validateCreateAndUpdate,
   checkSessionMiddleware,
   rolMiddleware([UserType.ADMIN]),
   createQuestion
@@ -50,7 +50,7 @@ router.put(
   "/:id",
   checkSessionMiddleware,
   rolMiddleware([UserType.ADMIN]),
-  validateCreateAndUpdate,
+  // validateCreateAndUpdate,
   updateQuestion
 );
 router.delete(
