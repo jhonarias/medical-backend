@@ -4,7 +4,7 @@ const JWT_SECRET = process.env.JWT_SECRET || "defaultToken.010101";
 
 const generateToken = async (user: User) => {
   const jwt = sign({ _id: user._id, role: user.role }, JWT_SECRET, {
-    expiresIn: "2h",
+    expiresIn: "24h",
   });
   return jwt;
 };
