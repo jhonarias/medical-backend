@@ -22,14 +22,14 @@ const validateCreateAndUpdate = [
         }
       return true;
     }),
-    check("role").custom((value, { req }) => {
-      if (value.toLowerCase() === UserType.ADMIN.toLowerCase()) {
-        throw new Error(
-          "No esta autorizado para crear un rol admin"
-        );
-      }
-      return true;
-    }),
+    // check("role").custom((value, { req }) => {
+    //   if (value.toLowerCase() === UserType.ADMIN.toLowerCase()) {
+    //     throw new Error(
+    //       "No esta autorizado para crear un rol admin"
+    //     );
+    //   }
+    //   return true;
+    // }),
   (req: Request, res: Response, next: NextFunction) => {
     validateResult(req, res, next);
   },
