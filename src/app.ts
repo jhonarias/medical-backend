@@ -21,7 +21,10 @@ app.use('/uploads', express.static(uploadsFolder));
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: ['http://localhost:4200', 'https://jhonarias.github.io/medical-frontend'], // Configura el origen permitido ['https://']
+    origin: [
+      'http://localhost:4200',
+      'https://jhonarias.github.io/medical-frontend',
+      'https://jhonarias.github.io'], // Configura el origen permitido ['https://']
     // methods: ["GET", "POST", "PUT", "DELETE"], // Configura los métodos HTTP permitidos
     // allowedHeaders: ["Content-Type", "Access-Control-Allow-Origin"], // Configura los encabezados permitidos
     credentials: true, // Habilita el intercambio de cookies y credenciales de autenticación
